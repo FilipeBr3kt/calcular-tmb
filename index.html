@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Calculador de TMB</title>
+  </head>
+  <body>
+    <!--navbar -->
+    <header class="cabecalho">
+      <div class="logo">
+        <img src="/img/Odontologia-Emblema.png" alt="logo" />
+      </div>
+      <nav class="navbar">
+        <ul class="nav-list">
+          <li id="intro-um"><a href="#intro">Taxa basal</a></li>
+          <li id="intro-dois">
+            <a href="#intro">TMB</a>
+          </li>
+          <li><a href="#calc">Fórmulas</a></li>
+          <li><a href="#">Calculadora</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-menu">
+        <i id="menu-button" class="fa-solid fa-bars"></i>
+      </div>
+      <div class="login">
+        <div class="login-list" id="login-link">
+          <a href="https://github.com/FilipeBr3kt"
+            ><button class="botao"><i class="fa-brands fa-github"></i></button
+          ></a>
+          <a href="https://www.linkedin.com/in/filipe-buttchevitz-aa6a52247/"
+            ><button class="botao"><i class="fa-brands fa-linkedin"></i></button
+          ></a>
+        </div>
+      </div>
+    </header>
+    <!--Containers-->
+    <section class="container">
+      <article class="box-text">
+        <span class="text">Taxa metabólica basal</span>
+        <span class="text">Aprenda agora sobre</span>
+      </article>
+    </section>
+    <section id="intro" class="introducao">
+      <div class="titulo">
+        <h1>O que é "TMB"?</h1>
+      </div>
+      <article class="box-intro">
+        <div>
+          <span
+            >A taxa metabólica basal (TMB) é a quantidade de energia (calorias)
+            que o corpo precisa para manter suas funções vitais em repouso, como
+            a respiração, circulação sanguínea, manutenção da temperatura
+            corporal e atividade celular. Em outras palavras, é a quantidade
+            mínima de energia que o corpo precisa para sobreviver em um estado
+            de descanso completo. A TMB varia de pessoa para pessoa, dependendo
+            de fatores como idade, sexo, altura, peso e nível de atividade
+            física. Por isso, é importante calcular a TMB para determinar a
+            quantidade de calorias que uma pessoa precisa consumir diariamente
+            para manter seu peso atual ou atingir um determinado objetivo de
+            perda ou ganho de peso. A TMB pode ser calculada usando uma fórmula
+            matemática específica ou por meio de testes de medição de taxa
+            metabólica.</span
+          >
+        </div>
+        <div class="imagem">
+          <img src="/img/Anatomia-Cérebro-PNG.png" alt="cerebro" />
+        </div>
+      </article>
+    </section>
+    <section id="calc" class="introducao">
+      <div class="titulo">
+        <h1>Como calcular?</h1>
+      </div>
+      <article class="box-intro">
+        <div>
+          <span
+            >Existem diversas equações e fórmulas para estimar a TMB, mas a mais
+            utilizada é a Equação de Harris-Benedict, que leva em consideração o
+            sexo, idade, peso e altura do indivíduo. Para homens, a fórmula é:
+            88,36 + (13,4 x peso em kg) + (4,8 x altura em cm) - (5,7 x idade em
+            anos). Para mulheres, a fórmula é: 447,6 + (9,2 x peso em kg) + (3,1
+            x altura em cm) - (4,3 x idade em anos). É importante lembrar que
+            essas fórmulas fornecem apenas uma estimativa da TMB e que outros
+            fatores individuais podem influenciar na necessidade energética
+            diária de cada pessoa. Por isso, é recomendado consultar um
+            profissional de saúde para obter uma avaliação mais precisa.
+          </span>
+        </div>
+        <div class="imagem">
+          <img
+            src="/img/pngtree-cartoon-hand-drawn-purple-body-vascular-system-heart-illustration-png-image_5604632.png"
+            alt="cerebro"
+          />
+        </div>
+      </article>
+    </section>
+    <section class="calculadora">
+      <div class="formulario">
+        <form id="formu">
+          <div class="space">
+            <label for="nome">
+              <input
+                type="text"
+                name="nome"
+                id="dado"
+                class="nome"
+                placeholder="nome"
+              />
+            </label>
+          </div>
+          <div class="space">
+            <label for="idade">
+              <input
+                type="text"
+                name="idade"
+                id="dado"
+                class="idade"
+                placeholder="idade"
+              />
+            </label>
+          </div>
+          <div class="space">
+            <label for="altura">
+              <input
+                class="altura"
+                type="text"
+                name="altura"
+                id="dado"
+                placeholder="altura"
+              />
+            </label>
+          </div>
+          <div class="space">
+            <label for="peso">
+              <input
+                class="peso"
+                type="text"
+                name="peso"
+                id="dado"
+                placeholder="peso"
+              />
+            </label>
+          </div>
+          <div class="space">
+            <label for="sexo">
+              <input
+                class="sexo"
+                type="text"
+                name="sexo"
+                id="dado"
+                placeholder="M=masculino, F=feminino"
+              />
+            </label>
+          </div>
+        </form>
+        <div class="space">
+          <button id="adicionar-valor" class="botao">Enviar</button>
+        </div>
+      </div>
+    </section>
+    <section class="tabela">
+      <table class="tabela-tmb">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Altura</th>
+            <th>Peso</th>
+            <th>Sexo</th>
+            <th>TMB</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+    <!--Javascript-->
+    <script src="/js/script.js"></script>
+    <script src="/js/remover.js"></script>
+    <script src="/js/menu.js"></script>
+    <script
+      src="https://kit.fontawesome.com/cceb9f1674.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

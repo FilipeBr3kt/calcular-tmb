@@ -1,0 +1,700 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&family=Volkhov&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: #fff;
+  width: 100%;
+}
+
+.cabecalho {
+  display: flex;
+  background-color: #5e0a80;
+  height: 18vh;
+  justify-content: space-between;
+}
+
+.logo {
+  display: grid;
+  place-items: center;
+}
+
+.logo img {
+  height: 120px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar ul li {
+  padding: 30px;
+}
+
+.navbar ul li a {
+  color: #fff;
+  font-family: "Volkhov", serif;
+  font-size: 21px;
+  transition: 0.6s;
+  position: relative;
+}
+
+.navbar ul li a::after {
+  content: "";
+  left: 0;
+  bottom: -6px;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+
+.navbar ul li a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+#intro-dois {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu .fa-bars {
+  font-size: 35px;
+  color: #fff;
+}
+
+.login {
+  display: flex;
+  padding-right: 30px;
+}
+
+.login-list {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 50% 50%;
+}
+
+.botao {
+  padding: 10px 50px;
+  border-radius: 5px;
+  font-family: "Volkhov", serif;
+  font-size: 21px;
+  margin-left: 20px;
+  background: transparent;
+  color: #fff;
+  border: solid 2px #fff;
+  outline: none;
+  transition: 0.5s;
+}
+
+.login:last-child {
+  margin-right: 60px;
+}
+
+.botao:hover {
+  opacity: 0.7;
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 370px;
+  background: url(/img/background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.box-text {
+  display: grid;
+  grid-template-rows: 50% 50%;
+  place-items: center;
+  height: 40%;
+  width: 60%;
+}
+
+.box-text .text {
+  color: #fff;
+  font-family: "Volkhov", serif;
+  font-size: 45px;
+  letter-spacing: 7px;
+  line-height: 150px;
+}
+
+.introducao {
+  display: grid;
+  place-items: center;
+  height: 500px;
+}
+
+.titulo h1 {
+  border-bottom: solid 2px #000;
+  margin-top: 30px;
+  font-size: 25px;
+  font-family: "cinzel", serif;
+}
+
+.box-intro {
+  place-items: center;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.box-intro div {
+  display: flex;
+  justify-content: center;
+}
+
+.box-intro div span {
+  display: flex;
+  width: 70%;
+  font-family: "Volkhov", serif;
+  font-size: 19px;
+}
+
+.imagem img {
+  width: 100%;
+  height: 400px;
+}
+
+.calculadora {
+  background: url(/img/background.png);
+  height: 500px;
+  display: grid;
+  place-items: center;
+}
+
+.formulario {
+  background: transparent;
+  border: solid 2px #fff;
+  border-radius: 20px;
+  width: 90%;
+  height: 70%;
+  display: grid;
+  place-items: center;
+}
+
+.formulario form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.formulario .space label input {
+  padding: 10px 25px 10px 25px;
+  margin-left: 30px;
+  color: #000;
+  font-family: "Volkhov", serif;
+  font-size: 19px;
+  border: solid 2px #fff;
+  border-radius: 10px;
+}
+
+#formu {
+  display: flex;
+  justify-content: center;
+}
+.formulario .space label input {
+  margin: 10px 20px 10px 20px;
+  font-size: 15px;
+}
+
+.sex {
+  font-size: 19px;
+  font-family: "Volkhov", serif;
+  color: #fff;
+}
+
+.tabela {
+  height: 40vh;
+  margin-top: 6vh;
+  margin-bottom: 6vh;
+  display: flex;
+  justify-content: center;
+}
+.tabela-tmb {
+  border: solid 3px #000;
+  border-collapse: collapse;
+  height: 3vh;
+}
+.tabela-tmb thead {
+  background-color: #5e0a80;
+  color: #fff;
+}
+.tabela-tmb tr th {
+  border: solid #000 3px;
+  padding: 10px 50px;
+  font-family: "Volkhov", sans-serif;
+  font-weight: 100;
+}
+.tabela tr td {
+  border: solid #000 3px;
+  padding: 10px 50px;
+  font-family: "Volkhov", sans-serif;
+}
+
+/* .tabela {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: grid;
+  place-items: center;
+}
+
+.tabela-tmb {
+  border-collapse: collapse;
+}
+
+.tabela-tmb tr,
+th {
+  padding: 10px 60px 10px 60px;
+  border: solid 3px black;
+  font-family: "Volkhov", serif;
+}
+
+.tabela-tmb tr,
+td {
+  padding: 10px 60px 10px 60px;
+  border: solid 3px black;
+  font-family: "Volkhov", serif;
+} */
+
+/*CLASSLISTS*/
+
+.tableOut {
+  opacity: 0;
+  transition: 1s;
+}
+
+/*MEDIA QUERY*/
+
+/* MOBILE CONCLUIDO */
+@media (max-width: 600px) {
+  .logo img {
+    display: none;
+  }
+  .mobile-menu {
+    display: grid;
+    place-items: center;
+  }
+  .login-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: 16vh;
+    right: -100%;
+    height: 16vh;
+    width: 100vw;
+    background-color: #5e0a80;
+    transition: 1s ease-in-out;
+  }
+  .active {
+    right: 0;
+  }
+  #intro-um {
+    display: none;
+  }
+  #intro-dois {
+    display: block;
+  }
+
+  .navbar ul li {
+    padding: 15px;
+  }
+  .navbar ul li a {
+    font-size: 16px;
+  }
+  .navbar ul {
+    margin-right: 35px;
+  }
+  .container .box-text {
+    width: 100%;
+  }
+  .container .box-text .text {
+    font-size: 28px;
+    letter-spacing: 2px;
+  }
+  .introducao {
+    display: flex;
+    flex-direction: column;
+  }
+  .introducao .box-intro {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .introducao .box-intro div {
+    width: 100%;
+  }
+  .introducao .box-intro div span {
+    width: 100%;
+    font-size: 12px;
+    padding: 10px;
+  }
+  .introducao .box-intro div img {
+    height: 200px;
+    width: 50%;
+  }
+  .introducao .titulo h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .formulario {
+    height: 98%;
+  }
+  #formu {
+    display: grid;
+    place-items: center;
+  }
+  .formulario .space label input {
+    margin: 0;
+    margin-top: 20px;
+    font-size: 15px;
+  }
+  .space .botao {
+    font-size: 17px;
+  }
+  .tabela-tmb tr th {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+  .tabela-tmb tr td {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+  /* .tabela-tmb thead tr th {
+    font-size: 12px;
+    padding: 10px 13px 10px 13px;
+  } */
+}
+
+@media only screen and (min-width: 601px) and (max-width: 780px) {
+  .mobile-menu {
+    display: grid;
+    place-items: center;
+  }
+  .login-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: 16vh;
+    right: -100%;
+    height: 16vh;
+    width: 100vw;
+    background-color: #5e0a80;
+    transition: 1s ease-in-out;
+  }
+  .active {
+    right: 0;
+  }
+  #intro-um {
+    display: none;
+  }
+  #intro-dois {
+    display: block;
+  }
+  .navbar ul li:last-child {
+    margin-right: 50px;
+  }
+  .logo {
+    display: none;
+  }
+  .container .box-text {
+    width: 100%;
+  }
+  .container .box-text .text {
+    letter-spacing: 3px;
+  }
+  .calculadora {
+    margin-top: 30px;
+  }
+  .introducao {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .introducao .box-intro {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .introducao .box-intro div {
+    width: 100%;
+  }
+  .introducao .box-intro div span {
+    width: 100%;
+    font-size: 18px;
+    padding: 10px;
+  }
+  .introducao .box-intro div img {
+    height: 300px;
+    width: 40%;
+  }
+  .introducao .titulo h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  #formu {
+    display: flex;
+    justify-content: center;
+  }
+  .formulario .space label input {
+    margin: 10px 20px 10px 20px;
+    font-size: 15px;
+  }
+  .tabela-tmb tr th {
+    padding: 10px 20px;
+  }
+  .tabela-tmb tr td {
+    padding: 10px 20px;
+  }
+  /* .tabela-tmb thead tr th {
+    font-size: 15px;
+    padding: 10px 20px 10px 20px;
+  } */
+}
+
+/* TABLET CONCLUIDO */
+@media only screen and (min-width: 781px) and (max-width: 1100px) {
+  .mobile-menu {
+    display: grid;
+    place-items: center;
+  }
+  .login-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: 16vh;
+    right: -100%;
+    height: 16vh;
+    width: 100vw;
+    background-color: #5e0a80;
+    transition: 1s ease-in-out;
+  }
+  .active {
+    right: 0;
+  }
+  #intro-um {
+    display: none;
+  }
+  #intro-dois {
+    display: block;
+  }
+  .navbar ul li:last-child {
+    margin-right: 50px;
+  }
+  .logo {
+    display: grid;
+    place-items: center;
+  }
+  .logo img {
+    margin: 0;
+  }
+  .container .box-text {
+    width: 100%;
+  }
+  .container .box-text .text {
+    letter-spacing: 3px;
+  }
+  .calculadora {
+    margin-top: 30px;
+  }
+  .introducao {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .introducao .box-intro {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .introducao .box-intro div {
+    width: 100%;
+  }
+  .introducao .box-intro div span {
+    width: 100%;
+    font-size: 18px;
+    padding: 10px;
+  }
+  .introducao .box-intro div img {
+    height: 300px;
+    width: 40%;
+  }
+  .introducao .titulo h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  #formu {
+    display: flex;
+    justify-content: center;
+  }
+  .formulario .space label input {
+    margin: 10px 20px 10px 20px;
+    font-size: 15px;
+  }
+  .tabela-tmb tr th {
+    padding: 10px 20px;
+  }
+  .tabela-tmb tr td {
+    padding: 10px 20px;
+  }
+  /* .tabela-tmb thead tr th {
+    font-size: 15px;
+    padding: 10px 20px 10px 20px;
+  } */
+}
+
+/* NOTEBOOK CONCLUIDO */
+@media only screen and (min-width: 1101px) and (max-width: 1400px) {
+  #formu {
+    display: flex;
+    justify-content: center;
+  }
+  .formulario .space label input {
+    margin: 20px 30px 20px 30px;
+    font-size: 15px;
+  }
+}
+
+/*@media only screen and (max-width: 1305px) {
+  .navbar ul li a {
+    font-size: 17px;
+  }
+  .login .botao {
+    font-size: 17px;
+  }
+  .logo img {
+    height: 100px;
+  }
+  .box-intro div span {
+    font-size: 17px;
+  }
+}
+
+@media only screen and (max-width: 1195px) {
+  .logo {
+    display: none;
+  }
+  .container .box-text .text {
+    font-size: 30px;
+  }
+  .titulo h1 {
+    font-size: 23px;
+  }
+  table {
+    display: none;
+  }
+}
+
+@media (max-width: 1065px) {
+  .box-intro div span {
+    font-size: 15px;
+  }
+  .box-intro div img {
+    height: 300px;
+  }
+  .titulo h1 {
+    font-size: 19px;
+  }
+}
+
+@media only screen and (max-width: 885px) {
+  .login .botao {
+    padding: 5px 10px 5px 10px;
+  }
+  .box-intro div span {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 805px) {
+  .navbar ul li a {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 780px) {
+  #intro-um {
+    display: none;
+  }
+  #intro-dois {
+    display: flex;
+  }
+  .container .box-text .text {
+    font-size: 28px;
+    letter-spacing: 2px;
+  }
+  .box-intro div img {
+    height: 250px;
+  }
+}
+
+@media (max-width: 750px) {
+  .titulo h1 {
+    font-size: 16px;
+  }
+  .box-intro div span {
+    width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .login .botao {
+    font-size: 12px;
+  }
+  .navbar ul li a {
+    font-size: 12px;
+  }
+  .navbar ul li {
+    padding: 15px;
+  }
+  .container .box-text .text {
+    font-size: 25px;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 525px) {
+  .container .box-text {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .login .botao {
+    font-size: 14px;
+  }
+  .navbar ul li a {
+    font-size: 14px;
+  }
+  .navbar ul li {
+    padding: 10px;
+  }
+}
+*/
